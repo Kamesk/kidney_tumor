@@ -1,3 +1,82 @@
 [2023-12-27 16:30:55,390: INFO: main: new project started]
 [2023-12-27 16:31:17,323: INFO: main: new project started]
 [2023-12-27 16:34:44,688: INFO: main: new project started]
+[2023-12-28 12:38:40,421: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 12:38:40,429: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 12:57:53,477: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 12:57:53,484: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 12:57:53,486: INFO: common: created directory at: artifacts]
+[2023-12-28 12:57:53,487: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-28 12:57:53,489: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 12:58:05,256: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 13:03:00,004: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 13:03:00,007: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 13:03:00,009: INFO: common: created directory at: artifacts]
+[2023-12-28 13:03:00,010: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-28 13:03:00,013: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 13:03:15,220: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 13:16:27,971: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 13:16:27,979: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 13:16:27,980: INFO: common: created directory at: artifacts]
+[2023-12-28 13:16:27,981: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-28 13:16:27,982: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 13:16:41,938: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 14:28:33,190: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-28 14:28:33,194: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 14:28:33,197: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 14:28:33,197: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "D:\tube\kidney_tumor\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jarviz_92\anaconda3\envs\kidney\Lib\site-packages\box\box.py", line 284, in __init__
+    raise BoxValueError("Cannot extrapolate Box from string")
+box.exceptions.BoxValueError: Cannot extrapolate Box from string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\tube\kidney_tumor\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tube\kidney_tumor\src\cnnClassifier\config\configuration.py", line 14, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jarviz_92\anaconda3\envs\kidney\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tube\kidney_tumor\src\cnnClassifier\utils\common.py", line 37, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2023-12-28 14:30:08,868: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-28 14:30:08,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 14:30:08,879: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 14:30:08,880: INFO: common: created directory at: artifacts]
+[2023-12-28 14:30:08,881: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-28 14:30:08,881: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 14:30:09,547: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1LgBuNKYtDGtb0gOhrES4qTBX7HJ4qnm6/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 14:30:09,548: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "D:\tube\kidney_tumor\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\components\data_ingestion.py", line 45, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jarviz_92\anaconda3\envs\kidney\Lib\zipfile\__init__.py", line 1321, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2023-12-28 14:36:18,724: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-28 14:36:18,732: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-28 14:36:18,735: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-28 14:36:18,736: INFO: common: created directory at: artifacts]
+[2023-12-28 14:36:18,736: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-28 14:36:18,737: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 14:36:38,321: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-12-28 14:36:38,828: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
