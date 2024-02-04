@@ -100,3 +100,64 @@ x==========x]
 [2024-02-04 09:36:20,843: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2024-02-04 10:55:31,032: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 10:55:31,047: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 10:55:31,049: INFO: common: created directory at: artifacts]
+[2024-02-04 10:55:31,051: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-04 11:15:11,836: INFO: utils: Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2024-02-04 11:15:11,837: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-02-04 11:15:14,388: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-04 11:15:14,391: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 11:15:14,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 11:15:14,399: INFO: common: created directory at: artifacts]
+[2024-02-04 11:15:14,400: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-04 11:15:14,402: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 11:15:15,115: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 11:15:15,117: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "d:\tube\kidney_tumor\main.py", line 12, in <module>
+    data_ingestion.main()
+  File "d:\tube\kidney_tumor\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "d:\tube\kidney_tumor\src\cnnClassifier\components\data_ingestion.py", line 45, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Jarviz_92\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-02-04 12:03:36,634: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 12:03:36,638: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 12:03:36,640: INFO: common: created directory at: artifacts]
+[2024-02-04 12:03:36,642: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-04 12:03:36,643: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:03:38,216: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:16:01,069: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 12:16:01,080: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 12:16:01,082: INFO: common: created directory at: artifacts]
+[2024-02-04 12:16:01,084: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-04 12:16:01,085: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:16:02,439: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:17:32,598: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 12:17:32,600: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 12:17:32,602: INFO: common: created directory at: artifacts]
+[2024-02-04 12:17:32,603: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-04 12:17:32,605: INFO: 3172177572: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:17:34,190: INFO: 3172177572: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:26:46,776: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-04 12:26:46,780: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 12:26:46,783: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 12:26:46,784: INFO: common: created directory at: artifacts]
+[2024-02-04 12:26:46,785: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-04 12:26:46,786: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:27:18,593: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/15vjajBNnvo1EkAghZEYZn-tOwmGnTkzx/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-04 12:27:18,950: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-02-04 12:27:18,951: INFO: main: *******************]
+[2024-02-04 12:27:18,951: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-02-04 12:27:18,952: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-04 12:27:18,954: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-04 12:27:18,955: INFO: common: created directory at: artifacts]
+[2024-02-04 12:27:18,955: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-04 12:27:19,497: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
