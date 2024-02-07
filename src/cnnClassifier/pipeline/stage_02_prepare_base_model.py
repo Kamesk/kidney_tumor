@@ -1,3 +1,8 @@
+import sys
+import os
+
+project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # Adjust the number of '..' as needed
+sys.path.append(project_dir)
 from src.cnnClassifier.config.configuration import ConfigurationManager
 from src.cnnClassifier.components.prepare_base_model import PrepareBaseModel
 from src.cnnClassifier import logger

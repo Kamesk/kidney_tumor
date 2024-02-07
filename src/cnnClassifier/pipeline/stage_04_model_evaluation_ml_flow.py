@@ -1,3 +1,8 @@
+import sys
+import os
+
+project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # Adjust the number of '..' as needed
+sys.path.append(project_dir)
 from src.cnnClassifier.config.configuration import ConfigurationManager
 from src.cnnClassifier.components.model_evaluation_ml_flow import Evaluation
 from src.cnnClassifier import logger
@@ -12,7 +17,7 @@ class EvaluationPipeline:
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
-        evaluation.log_into_mlflow()
+        # evaluation.log_into_mlflow()
 
 if __name__ == '__main__':
     try:
