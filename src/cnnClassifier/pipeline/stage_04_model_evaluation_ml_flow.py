@@ -7,6 +7,10 @@ from src.cnnClassifier.config.configuration import ConfigurationManager
 from src.cnnClassifier.components.model_evaluation_ml_flow import Evaluation
 from src.cnnClassifier import logger
 
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/Kamesk/kidney_tumor.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="Kamesk"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="8a9f1f9042667d73da737556a992051abe77ba15"
+
 STAGE_NAME = "model evaluation stages"
 
 class EvaluationPipeline:
@@ -17,7 +21,7 @@ class EvaluationPipeline:
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
-        # evaluation.log_into_mlflow()
+        evaluation.log_into_mlflow()
 
 if __name__ == '__main__':
     try:

@@ -609,3 +609,160 @@ x==========x]
 [2024-02-07 21:03:51,427: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages completed <<<<<<
 
 x==========x]
+[2024-02-07 21:17:50,508: INFO: stage_04_model_evaluation_ml_flow: *******************]
+[2024-02-07 21:17:50,508: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages started <<<<<<]
+[2024-02-07 21:17:50,510: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 21:17:50,511: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 21:17:50,512: INFO: common: created directory at: artifacts]
+[2024-02-07 21:17:58,618: INFO: common: json file saved at: scores.json]
+[2024-02-07 21:17:58,619: ERROR: stage_04_model_evaluation_ml_flow: [WinError 3] The system cannot find the path specified: 'S:\\']
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 27, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\components\model_evaluation_ml_flow.py", line 59, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\fluent.py", line 308, in start_run
+    client = MlflowClient()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\client.py", line 93, in __init__
+    self._tracking_client = TrackingServiceClient(final_tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 52, in __init__
+    self.store
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 56, in store
+    return utils._get_store(self.tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 216, in _get_store
+    return _tracking_store_registry.get_store(store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 39, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 49, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 130, in _get_file_store
+    return FileStore(store_uri, store_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 172, in __init__
+    self._create_default_experiment()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 178, in _create_default_experiment
+    mkdir(self.root_directory)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 212, in mkdir
+    raise e
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 209, in mkdir
+    os.makedirs(target)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'S:\\'
+[2024-02-07 21:21:53,744: INFO: stage_04_model_evaluation_ml_flow: *******************]
+[2024-02-07 21:21:53,745: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages started <<<<<<]
+[2024-02-07 21:21:53,746: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 21:21:53,748: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 21:21:53,748: INFO: common: created directory at: artifacts]
+[2024-02-07 21:22:01,695: INFO: common: json file saved at: scores.json]
+[2024-02-07 21:22:01,696: ERROR: stage_04_model_evaluation_ml_flow: [WinError 3] The system cannot find the path specified: 'S:\\']
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 27, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\components\model_evaluation_ml_flow.py", line 59, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\fluent.py", line 308, in start_run
+    client = MlflowClient()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\client.py", line 93, in __init__
+    self._tracking_client = TrackingServiceClient(final_tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 52, in __init__
+    self.store
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 56, in store
+    return utils._get_store(self.tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 216, in _get_store
+    return _tracking_store_registry.get_store(store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 39, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 49, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 130, in _get_file_store
+    return FileStore(store_uri, store_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 172, in __init__
+    self._create_default_experiment()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 178, in _create_default_experiment
+    mkdir(self.root_directory)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 212, in mkdir
+    raise e
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 209, in mkdir
+    os.makedirs(target)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'S:\\'
+[2024-02-07 21:23:15,276: INFO: stage_04_model_evaluation_ml_flow: *******************]
+[2024-02-07 21:23:15,276: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages started <<<<<<]
+[2024-02-07 21:23:15,278: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 21:23:15,279: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 21:23:15,279: INFO: common: created directory at: artifacts]
+[2024-02-07 21:23:23,127: INFO: common: json file saved at: scores.json]
+[2024-02-07 21:23:23,127: ERROR: stage_04_model_evaluation_ml_flow: [WinError 3] The system cannot find the path specified: 'S:\\']
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 27, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation_ml_flow.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\components\model_evaluation_ml_flow.py", line 59, in log_into_mlflow
+    with mlflow.start_run():
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\fluent.py", line 308, in start_run
+    client = MlflowClient()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\client.py", line 93, in __init__
+    self._tracking_client = TrackingServiceClient(final_tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 52, in __init__
+    self.store
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 56, in store
+    return utils._get_store(self.tracking_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 216, in _get_store
+    return _tracking_store_registry.get_store(store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 39, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\registry.py", line 49, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\tracking\_tracking_service\utils.py", line 130, in _get_file_store
+    return FileStore(store_uri, store_uri)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 172, in __init__
+    self._create_default_experiment()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\store\tracking\file_store.py", line 178, in _create_default_experiment
+    mkdir(self.root_directory)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 212, in mkdir
+    raise e
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\mlflow\utils\file_utils.py", line 209, in mkdir
+    os.makedirs(target)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'S:\\'
+[2024-02-07 21:25:15,581: INFO: stage_04_model_evaluation_ml_flow: *******************]
+[2024-02-07 21:25:15,581: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages started <<<<<<]
+[2024-02-07 21:25:15,583: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-07 21:25:15,585: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-07 21:25:15,586: INFO: common: created directory at: artifacts]
+[2024-02-07 21:25:23,730: INFO: common: json file saved at: scores.json]
+[2024-02-07 21:25:26,075: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-07 21:25:26,080: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-07 21:25:27,648: INFO: builder_impl: Assets written to: C:\Users\JARVIZ~1\AppData\Local\Temp\tmpbqs23ais\model\data\model\assets]
+[2024-02-07 21:26:10,502: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages completed <<<<<<
+
+x==========x]
