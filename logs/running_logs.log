@@ -766,3 +766,525 @@ This property should not be used in TensorFlow 2.0, as updates are applied autom
 [2024-02-07 21:26:10,502: INFO: stage_04_model_evaluation_ml_flow: >>>>>> stage model evaluation stages completed <<<<<<
 
 x==========x]
+[2024-02-08 12:21:17,107: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-08 12:21:17,108: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-08 12:21:48,574: INFO: _internal: 127.0.0.1 - - [08/Feb/2024 12:21:48] "GET / HTTP/1.1" 200 -]
+[2024-02-08 12:22:52,836: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-08 12:22:52,849: INFO: _internal: 127.0.0.1 - - [08/Feb/2024 12:22:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-08 13:11:20,083: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-08 13:11:20,084: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-08 13:11:28,634: INFO: _internal: 127.0.0.1 - - [08/Feb/2024 13:11:28] "GET / HTTP/1.1" 200 -]
+[2024-02-08 13:11:35,830: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 14, in predict
+    model = tf.keras.models.load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-08 13:11:35,844: INFO: _internal: 127.0.0.1 - - [08/Feb/2024 13:11:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 15:46:10,616: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 15:46:10,617: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 15:46:58,597: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 15:46:58] "GET / HTTP/1.1" 200 -]
+[2024-02-09 15:47:19,893: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = tf.keras.models.load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 15:47:19,904: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 15:47:19] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 16:00:13,622: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 16:00:13,622: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 16:00:28,285: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:00:28] "GET / HTTP/1.1" 200 -]
+[2024-02-09 16:01:07,478: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 37, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\prediction.py", line 13, in predict
+    model = tf.keras.models.load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 16:01:07,487: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:01:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 16:05:32,281: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 16:05:32,281: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 16:05:41,848: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:05:41] "GET / HTTP/1.1" 200 -]
+[2024-02-09 16:05:48,593: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 37, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\prediction.py", line 13, in predict
+    model = tf.keras.models.load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 16:05:48,600: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:05:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 16:35:33,502: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:35:33] "GET / HTTP/1.1" 200 -]
+[2024-02-09 16:42:49,848: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 16:42:49,849: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 16:43:06,218: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:43:06] "GET / HTTP/1.1" 200 -]
+[2024-02-09 16:43:11,965: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 38, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 15, in predict
+    model = tf.keras.models.load_model(model_path)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: D:/tube/kidney_tumor/model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 16:43:11,975: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 16:43:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:19:21,658: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:19:21,658: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:26:56,241: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-09 17:26:56,255: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:26:56,267: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:26:56,268: INFO: common: created directory at: artifacts]
+[2024-02-09 17:26:56,268: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-09 17:26:56,269: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1D7QlbGpmlro9bvCJagWr6vcMX7cw7cEU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-09 17:27:09,337: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1D7QlbGpmlro9bvCJagWr6vcMX7cw7cEU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-09 17:27:09,790: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-02-09 17:27:09,791: INFO: main: *******************]
+[2024-02-09 17:27:09,791: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-02-09 17:27:09,792: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:27:09,794: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:27:09,794: INFO: common: created directory at: artifacts]
+[2024-02-09 17:27:09,795: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-09 17:27:11,666: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-02-09 17:27:11,667: INFO: main: *******************]
+[2024-02-09 17:27:11,667: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-02-09 17:27:11,670: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:27:11,673: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:27:11,673: INFO: common: created directory at: artifacts]
+[2024-02-09 17:27:11,674: INFO: common: created directory at: artifacts\training]
+[2024-02-09 17:28:33,109: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-02-09 17:28:33,110: INFO: main: *******************]
+[2024-02-09 17:28:33,110: INFO: main: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-02-09 17:28:33,113: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:28:33,116: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:28:33,116: INFO: common: created directory at: artifacts]
+[2024-02-09 17:28:44,149: INFO: common: json file saved at: scores.json]
+[2024-02-09 17:28:46,451: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-09 17:28:46,563: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-09 17:28:48,333: INFO: builder_impl: Assets written to: C:\Users\JARVIZ~1\AppData\Local\Temp\tmpoe9rjzsp\model\data\model\assets]
+[2024-02-09 17:29:32,391: INFO: main: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]
+[2024-02-09 17:32:38,449: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:32:38,450: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:33:18,173: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:33:18] "GET / HTTP/1.1" 200 -]
+[2024-02-09 17:33:54,181: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model_path = os.path.join(self.model_directory, "model.h5")
+AttributeError: 'PredictionPipeline' object has no attribute 'model_directory'
+[2024-02-09 17:33:54,190: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:33:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:36:49,812: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:36:49,812: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:36:55,498: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:36:55] "GET / HTTP/1.1" 200 -]
+[2024-02-09 17:37:00,868: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 17:37:00,877: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:37:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:37:38,682: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-02-09 17:37:38,684: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:37:38,685: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:37:38,687: INFO: common: created directory at: artifacts]
+[2024-02-09 17:37:38,687: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-09 17:37:38,687: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1D7QlbGpmlro9bvCJagWr6vcMX7cw7cEU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-09 17:37:51,375: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1D7QlbGpmlro9bvCJagWr6vcMX7cw7cEU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-02-09 17:37:51,756: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-02-09 17:37:51,758: INFO: main: *******************]
+[2024-02-09 17:37:51,758: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-02-09 17:37:51,759: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:37:51,761: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:37:51,761: INFO: common: created directory at: artifacts]
+[2024-02-09 17:37:51,762: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-09 17:37:52,330: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-02-09 17:37:52,331: INFO: main: *******************]
+[2024-02-09 17:37:52,331: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-02-09 17:37:52,333: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:37:52,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:37:52,336: INFO: common: created directory at: artifacts]
+[2024-02-09 17:37:52,337: INFO: common: created directory at: artifacts\training]
+[2024-02-09 17:39:13,004: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-02-09 17:39:13,004: INFO: main: *******************]
+[2024-02-09 17:39:13,005: INFO: main: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-02-09 17:39:13,007: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-09 17:39:13,008: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-09 17:39:13,009: INFO: common: created directory at: artifacts]
+[2024-02-09 17:39:22,834: INFO: common: json file saved at: scores.json]
+[2024-02-09 17:39:25,125: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-09 17:39:25,242: WARNING: deprecation: From C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\training\tracking\tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.]
+[2024-02-09 17:39:27,014: INFO: builder_impl: Assets written to: C:\Users\JARVIZ~1\AppData\Local\Temp\tmpa6ifvo2h\model\data\model\assets]
+[2024-02-09 17:40:11,463: INFO: main: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]
+[2024-02-09 17:40:19,671: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:40:19,671: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:40:28,661: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:40:28] "GET / HTTP/1.1" 200 -]
+[2024-02-09 17:40:34,692: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 17:40:34,705: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:40:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:47:17,080: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:47:17,081: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:47:27,972: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:47:27] "GET / HTTP/1.1" 200 -]
+[2024-02-09 17:47:35,466: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 17:47:35,472: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:47:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:51:54,645: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 17:51:54,646: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 17:52:04,780: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:52:04] "GET / HTTP/1.1" 200 -]
+[2024-02-09 17:52:12,950: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 17:52:12,961: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:52:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 17:52:26,075: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:52:26] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-02-09 17:52:26,098: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 17:52:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-02-09 18:58:24,557: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 18:58:24,559: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 18:58:32,737: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 18:58:32] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:00:01,704: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:00:01] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:00:07,432: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 15, in predict
+    model = keras.models.load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\keras\saving\save.py", line 186, in load_model
+    loader_impl.parse_saved_model(filepath)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\tensorflow\python\saved_model\loader_impl.py", line 110, in parse_saved_model
+    raise IOError("SavedModel file does not exist at: %s/{%s|%s}" %
+OSError: SavedModel file does not exist at: model\model.h5/{saved_model.pbtxt|saved_model.pb}
+[2024-02-09 19:00:07,441: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:00:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 19:22:49,759: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.102:8080]
+[2024-02-09 19:22:49,759: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-09 19:23:09,461: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:23:09] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:23:14,279: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    tf.saved_model.save(model, "saved_model")
+UnboundLocalError: local variable 'model' referenced before assignment
+[2024-02-09 19:23:14,287: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:23:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 19:25:36,982: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:25:36] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:40:04,039: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:40:04] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:40:07,820: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    # Load the model using the absolute path
+UnboundLocalError: local variable 'model' referenced before assignment
+[2024-02-09 19:40:07,825: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:40:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-02-09 19:40:40,130: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:40:40] "GET / HTTP/1.1" 200 -]
+[2024-02-09 19:43:11,957: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Jarviz_92\anaconda3\envs\chick\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 36, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\tube\kidney_tumor\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    # Load the model using the absolute path
+UnboundLocalError: local variable 'model' referenced before assignment
+[2024-02-09 19:43:11,977: INFO: _internal: 127.0.0.1 - - [09/Feb/2024 19:43:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]

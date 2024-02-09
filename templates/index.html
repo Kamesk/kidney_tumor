@@ -187,7 +187,10 @@ function sendRequest(base64Data){
 					}catch(e){}
 					$(".res-part").html("<pre>" + JSON.stringify(res[0], undefined, 2) + "</pre>");
 					$("#loading").hide();
-				}
+				},
+                error: function(err) {
+                    console.error(err)
+                }
 			});
 		}
 	}
